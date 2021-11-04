@@ -1,0 +1,105 @@
+{
+  "people": {
+    "name": "Adam Szegedi",
+    "job_title": "Test Engineer",
+    "short_bio": "Experienced Test Automation Engineer with a demonstrated history of working in the banking industry. Skilled in SQL, Test Automation, Linux. Quality assurance professional with a strong background holding a BsC qualification of Business Information Technologist accredited by Corvinus University.",
+    "skills": [
+      "HTML",
+      "CSS",
+      "Linux",
+      "Test Automation",
+      "Agile",
+      "Test Planning",
+      "Quality Assurance",
+      "Robot Framework",
+      "Python",
+      "PL/SQL",
+      "SQL",
+      "Bussines Analysis",
+      "Scrum",
+      "Load Test",
+      "JavaScript",
+      "TypeScript",
+      "CI/CD"
+    ],
+    "contact": [
+      {
+        "type": "mail",
+        "data": "mail@adamszegedi.eu"
+      },
+      {
+        "type": "mail",
+        "data": "adam.szegedi@icloud.com"
+      },
+      {
+        "type": "phone",
+        "data": "+36203726959"
+      },
+      {
+        "type": "web",
+        "data": "https://www.linkedin.com/in/adamszegedi/",
+        "text": "Linkedin"
+      },
+      {
+        "type": "web",
+        "data": "https://www.facebook.com/szegediago/",
+        "text": "Facebook"
+      }
+    ],
+    "school": [
+      {
+        "date": "2018",
+        "school": "TÜV Certificate",
+        "title": "Scrum Master"
+      },
+      {
+        "date": "2007-2010",
+        "school": "Corvinus University of Budapest",
+        "title": "Bachelor's Degree, Business Information Technologist"
+      },
+      {
+        "date": "2003-2007",
+        "school": "Andrássy György Secondary School of Economics",
+        "title": "Basic marketing knowledge"
+      }
+    ],
+    "work": [
+      {
+        "date": "2019 - ",
+        "company": "Grepton Informatikai Zrt.",
+        "job_title": "Test Engineer / Python developer",
+        "responsibility": "Regression and load testing for various companies, legacy python application development."
+      },
+      {
+        "date": "2018 - 2019",
+        "company": "SmartX Solutions",
+        "job_title": "Test Engineer",
+        "responsibility": "Functional and regression testing for a debt management company. Maintain, develop, and integrate regression and load test tools into the company's environment."
+      },
+      {
+        "date": "2017 - 2018",
+        "company": "Netmobilitas Zrt.",
+        "job_title": "Test Engineer",
+        "responsibility": "Functional and regression testing for a listing site and all linked services. Maintain, develop, and integrate automated regression testing to a ci system."
+      },
+      {
+        "date": "2016 - 2017",
+        "company": "DOM-P Zrt.",
+        "job_title": "Business System Analyst / Test Engineer",
+        "responsibility": "Plan, develop and maintain the automated testing for several application maintained by our company."
+      },
+      {
+        "date": "2010 - 2016",
+        "company": "Allianz Hungária Zrt.",
+        "job_title": "Business System Analyst",
+        "responsibility": "Plan and coordinate the development of the accounting module. Write technical specification, and investigate user issues. Later on, I coordinated the team responsible for the development and maintenance of the whole accounting module."
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "skill": 4
+      }
+    ]
+  }
+}
