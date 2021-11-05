@@ -1,8 +1,8 @@
-import Contact from './contact';
+import Contact,{ ContactData } from './contact';
 import Board from '../board';
 
-const ContactList = ({ listOfContacts }) => {
-  const elements = listOfContacts.map((value) => <Contact contact={value} key={value.data} />);
+const ContactList = ({ listOfContacts }: {listOfContacts: ContactData[]}) => {
+  const elements = listOfContacts.map((value: ContactData) => <Contact contact={value} key={value.data} />);
   return <Board name="Contact" className="content-contact" elements={elements} />;
 };
 

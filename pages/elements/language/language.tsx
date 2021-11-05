@@ -1,7 +1,9 @@
 import Circle from './circle';
 
+export interface LanguageData {name: string, skill: number}
 
-const getScore = (language) => [...Array(5)].map(
+
+const getScore = (language: LanguageData) => [...Array(5)].map(
   (value, index) => {
     const filled = index <= language.skill;
     const key = (new Date().getTime()) * index;
@@ -9,7 +11,7 @@ const getScore = (language) => [...Array(5)].map(
   },
 );
 
-const Language = ({ language }) => (
+const Language = ({ language }: {language: LanguageData}) => (
   <div className="language-container">
     <div className="language-name">
       {language.name}

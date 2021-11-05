@@ -1,7 +1,7 @@
-import Experience from './experience';
+import Experience, {ExperienceData} from './experience';
 import Board from '../board';
 
-const ExperienceList = ({ listOfExperience }) => (
+const ExperienceList = ({ listOfExperience }: {listOfExperience: ExperienceData[]}) => (
   <Board
     name="Experience"
     className="content-work"

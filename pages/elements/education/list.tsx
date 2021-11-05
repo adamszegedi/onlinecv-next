@@ -1,7 +1,7 @@
-import Education from './education';
+import Education, {EducationData} from './education';
 import Board from '../board';
 
-const EducationList = ({ listOfEducation }) => (
+const EducationList = ({ listOfEducation }: {listOfEducation: EducationData[]}) => (
   <Board
     name="Educations"
     className="content-school"

@@ -1,34 +1,37 @@
-const Contact = ({ contact }) => {
-  let linkElement;
+export interface ContactData {data:string, text?: string, type:string};
+import Image from 'next/image';
+
+const Contact = ({ contact }: {contact: ContactData}): JSX.Element => {
+  let linkElement: JSX.Element = <></>;
   let href;
   switch (contact.type) {
     case 'web':
       linkElement = (
         <a href={contact.data}>
           <div className="button-layout button-contact-layout shadow">
-            <svg className="change-my-color"><use xlinkHref="#svgweb" /></svg>
+            <Image alt="web" src="/public_white_24dp.svg" height="20" width='20' />
             {contact.text}
           </div>
         </a>
       );
       break;
-    case 'phone':
-      href = `tel:${contact.data}`;
-      linkElement = (
-        <a href={href}>
+      case 'phone':
+        href = `tel:${contact.data}`;
+        linkElement = (
+          <a href={href}>
           <div className="button-layout button-contact-layout shadow">
-            <svg className="change-my-color"><use xlinkHref="#svgphone" /></svg>
+          <Image alt="phone" src="/call_white_24dp.svg" height="20" width='20' />
             {contact.data}
           </div>
         </a>
       );
       break;
-    case 'mail':
-      href = `mailto:${contact.data}`;
-      linkElement = (
-        <a href={href}>
+      case 'mail':
+        href = `mailto:${contact.data}`;
+        linkElement = (
+          <a href={href}>
           <div className="button-layout button-contact-layout shadow">
-            <svg className="change-my-color"><use xlinkHref="#svgmail" /></svg>
+            <Image alt="mail" src="/email_white_24dp.svg" height="20" width='20' />
             {contact.data}
           </div>
         </a>
@@ -39,5 +42,9 @@ const Contact = ({ contact }) => {
   }
   return linkElement;
 };
+
+function getContactElement(type: 'web'|'phone'|'mail'){
+
+}
 
 export default Contact;

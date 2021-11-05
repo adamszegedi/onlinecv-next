@@ -1,7 +1,7 @@
 import Skill from './skill';
 import Board from '../board';
 
-const SkillList = ({ listOfSkills }) => (
+const SkillList = ({ listOfSkills }: {listOfSkills:string[]}) => (
   <Board
     name="Skill"
     className="content-skills"

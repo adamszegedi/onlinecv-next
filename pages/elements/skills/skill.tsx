@@ -1,4 +1,4 @@
-const Skill = ({ text }) => (
+const Skill = ({ text }: {text:string}) => (
   <div className="button-layout shadow">{text}</div>
 );
 

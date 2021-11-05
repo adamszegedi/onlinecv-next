@@ -1,4 +1,6 @@
-const Experience = ({ experience }) => (
+export type ExperienceData = {company: string, job_title: string, date: string, responsibility: string}
+
+const Experience = ({ experience }: {experience: ExperienceData}) => (
   <div className="wrapper-block">
     <div className="title-format">
       {experience.company}
