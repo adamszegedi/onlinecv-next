@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import profilePic from '../data/profile_pic.jpg'
 
 interface HeaderData {"name":string, "bio":string, "src": string};
 
@@ -6,14 +7,15 @@ export default function Header({ name, bio, src }: HeaderData) {
   return (
     <div className="grid-header">
       <div className="item-pic">
-        <picture>
+        <picture className='profile-pic'>
         <Image
-        src={src}
+        src={profilePic}
         alt="Adam Szegedi"
-        width="200"
-        height="200"
+        placeholder="blur"
+        width="250"
+        height="250"
         layout='intrinsic'
-        className="profile-pic"
+        className='rounded'
         />
         </picture>
       </div>

@@ -24,14 +24,15 @@ h2 {
 }
 
 .profile-pic {
-  width: auto;
-  height: auto;
   max-height: 10em;
   max-width: 10em;
   min-width: 8em;
   min-height: auto;
   height: 100%;
   width: 100%;
+}
+
+.rounded {
   border-radius: 50%;
 }
 

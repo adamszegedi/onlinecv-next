@@ -7,23 +7,26 @@ import SkillList from './elements/skills/list';
 import LanguageList from './elements/language/list';
 import EducationList from './elements/education/list';
 import ExperienceList from './elements/experience/list';
+import profilePic from './data/profile_pic.jpg'
 
 const {name, short_bio, contact, skills, languages, school, work} = People.people;
+
 const src="/profile_pic.jpg"
+
 
 export default function Cv() {
   return (
     <>
     <Head>
-        <title>Social Media Preview</title>
+        <title>{name}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={name} />
+        <meta property="og:title" content={name} key="ogtitle" />
+        <meta property="og:description" content={short_bio} key="ogdesc" />
+        <meta property="og:image" content={profilePic.src} key="ogimage" />
         <meta name="twitter:card" content={short_bio} />
-        <meta
-          property="og:description"
-          content={short_bio}
-        />
-        <meta property="og:image" content={src} />
+        <meta name="description" content={short_bio} />
         </Head>
       <div>
         <Header name={name} bio={short_bio} src={src}/>
