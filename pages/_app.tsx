@@ -9,7 +9,7 @@ import EducationList from './elements/education/list';
 import ExperienceList from './elements/experience/list';
 import profilePic from './data/profile_pic.jpg'
 
-const {name, short_bio, contact, skills, languages, school, work} = People.people;
+const {name, twittertag, short_bio, contact, skills, languages, school, work} = People.people;
 
 const src="/profile_pic.jpg"
 
@@ -25,7 +25,10 @@ export default function Cv() {
         <meta property="og:title" content={name} key="ogtitle" />
         <meta property="og:description" content={short_bio} key="ogdesc" />
         <meta property="og:image" content={profilePic.src} key="ogimage" />
-        <meta name="twitter:card" content={short_bio} />
+        <meta name="theme-color" content="#546e7a" />
+        <meta name="twitter:card" content='summary' key="twittercard" />
+        <meta name="twitter:creator" content={twittertag} key="twittercreator" />
+        <meta name="twitter:description" content={short_bio} key="twitterdesc" />
         <meta name="description" content={short_bio} />
         </Head>
       <div>

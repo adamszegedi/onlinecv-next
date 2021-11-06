@@ -33,7 +33,7 @@ h2 {
 }
 
 .rounded {
-  border-radius: 50%;
+  border-radius: 50% !important;
 }
 
 .head-format {
@@ -81,9 +81,6 @@ h2 {
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
   color: var(--color-white);
-}
-
-.job {
 }
 
 .grid-content {
