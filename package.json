@@ -1,6 +1,7 @@
 {
   "name": "onlinecv-next",
   "private": true,
+  "cacheDirectories": [".next/cache"],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
