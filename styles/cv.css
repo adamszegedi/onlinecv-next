@@ -32,8 +32,8 @@ h2 {
   width: 100%;
 }
 
-.rounded {
-  border-radius: 50% !important;
+.profile-pic img {
+  border-radius: 50%;
 }
 
 .head-format {

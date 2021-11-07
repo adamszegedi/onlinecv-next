@@ -8,15 +8,10 @@ export default function Header({ name, bio, src }: HeaderData) {
     <div className="grid-header">
       <div className="item-pic">
         <picture className='profile-pic'>
-        <Image
-        src={profilePic}
-        alt="Adam Szegedi"
-        placeholder="blur"
-        width="250"
-        height="250"
-        layout='intrinsic'
-        className='rounded'
-        />
+          <Image
+          src={profilePic}
+          alt="Adam Szegedi"
+          />
         </picture>
       </div>
       <div className="item-card name">
