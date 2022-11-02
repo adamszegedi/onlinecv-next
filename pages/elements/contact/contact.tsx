@@ -1,4 +1,4 @@
-export interface ContactData {data:string, text?: string, type:string};
+export interface ContactData {data:string, text?: string, type:string, rel?: string, src?: string};
 import Image from 'next/image';
 
 const Contact = ({ contact }: {contact: ContactData}): JSX.Element => {
@@ -7,9 +7,9 @@ const Contact = ({ contact }: {contact: ContactData}): JSX.Element => {
   switch (contact.type) {
     case 'web':
       linkElement = (
-        <a href={contact.data}>
+        <a href={contact.data} rel={contact.rel}>
           <div className="button-layout button-contact-layout shadow">
-            <Image alt="web" src="/public_white_24dp.svg" height="20" width='20' />
+            <Image alt="web" src={contact.src!} height="20" width='20' />
             {contact.text}
           </div>
         </a>

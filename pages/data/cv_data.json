@@ -29,22 +29,22 @@
         "data": "mail@adamszegedi.eu"
       },
       {
-        "type": "mail",
-        "data": "adam.szegedi@icloud.com"
-      },
-      {
         "type": "phone",
         "data": "+36203726959"
       },
       {
         "type": "web",
         "data": "https://www.linkedin.com/in/adamszegedi/",
-        "text": "Linkedin"
+        "text": "Linkedin",
+        "rel": "me",
+        "src": "/public_white_24dp.svg"
       },
       {
         "type": "web",
-        "data": "https://www.facebook.com/szegediago/",
-        "text": "Facebook"
+        "data": "https://social.linux.pizza/@adamszegedi",
+        "text": "Mastodon",
+        "rel": "me",
+        "src": "/mastodon_white_24dp.svg"
       }
     ],
     "school": [
