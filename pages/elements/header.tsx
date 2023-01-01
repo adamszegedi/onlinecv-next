@@ -11,6 +11,7 @@ export default function Header({ name, bio, src }: HeaderData) {
           <Image
           src={profilePic}
           alt="Adam Szegedi"
+          style={{objectFit:"contain", width: "100%", height: "auto"}}
           />
         </picture>
       </div>
