@@ -8,6 +8,7 @@ import LanguageList from './elements/language/list';
 import EducationList from './elements/education/list';
 import ExperienceList from './elements/experience/list';
 import profilePic from './data/profile_pic.jpg'
+import { ContactData } from './elements/contact/contact';
 
 const {name, twittertag, short_bio, contact, skills, languages, school, work} = People.people;
 
@@ -31,16 +32,14 @@ export default function Cv() {
         <meta name="twitter:description" content={short_bio} key="twitterdesc" />
         <meta name="description" content={short_bio} />
         </Head>
-      <div>
+      <div className='w-2/3 m-auto'>
         <Header name={name} bio={short_bio} src={src}/>
-        <div className="grid-content">
-          <ContactList listOfContacts={contact} />
-          <SkillList listOfSkills={skills} />
-          <LanguageList listOfLanguage={languages} />
-          <EducationList listOfEducation={school} />
-          <ExperienceList listOfExperience={work} />
-        </div>
-      </div>
+        <ContactList listOfContacts={contact} />
+        <SkillList listOfSkills={skills} />
+        <LanguageList listOfLanguage={languages} />
+        <EducationList listOfEducation={school} />
+        <ExperienceList listOfExperience={work} />
+    </div>
     </>
   );
 }

@@ -26,25 +26,25 @@
     "contact": [
       {
         "type": "mail",
-        "data": "mail@adamszegedi.eu"
+        "data": "mailto:mail@adamszegedi.eu",
+        "text": "mail@adamszegedi.eu" 
       },
       {
         "type": "phone",
-        "data": "+36203726959"
+        "data": "tel:+36203726959",
+        "text": "+36203726959"
       },
       {
-        "type": "web",
+        "type": "linkedin",
         "data": "https://www.linkedin.com/in/adamszegedi/",
         "text": "Linkedin",
-        "rel": "me",
-        "src": "/public_white_24dp.svg"
+        "rel": "me"
       },
       {
-        "type": "web",
+        "type": "mastodon",
         "data": "https://social.linux.pizza/@adamszegedi",
         "text": "Mastodon",
-        "rel": "me",
-        "src": "/mastodon_white_24dp.svg"
+        "rel": "me"
       }
     ],
     "school": [

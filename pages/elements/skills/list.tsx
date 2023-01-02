@@ -1,12 +1,9 @@
 import Skill from './skill';
-import Board from '../board';
 
 const SkillList = ({ listOfSkills }: {listOfSkills:string[]}) => (
-  <Board
-    name="Skill"
-    className="content-skills"
-    elements={listOfSkills.map((skill) => <Skill text={skill} key={skill} />)}
-  />
+  <ul className='list-disc'>
+    {listOfSkills.map((skill) => <Skill text={skill} key={skill} />)}
+  </ul>
 );
 
 export default SkillList;
