@@ -32,12 +32,12 @@ export default function Cv() {
         <meta name="twitter:description" content={short_bio} key="twitterdesc" />
         <meta name="description" content={short_bio} />
         </Head>
-      <div className='w-2/3 m-auto'>
+      <div className='w-4/5 m-auto p-5'>
         <Header name={name} bio={short_bio} src={src}/>
         <ContactList listOfContacts={contact} />
         <SkillList listOfSkills={skills} />
         <LanguageList listOfLanguage={languages} />
-        <EducationList listOfEducation={school} />
+        <EducationList listOfEducation={school}/>
         <ExperienceList listOfExperience={work} />
     </div>
     </>

@@ -13,12 +13,12 @@ export default function Header({ name, bio, src }: HeaderData) {
           style={{objectFit:"contain", width: "100px", height: "auto"}}
           />
         </picture>
-            <div className="item-card name">
+        <div>
         <h1>
           {name}
         </h1>
       </div>
-      <div className="item-pres">{bio}</div>
+      <div>{bio}</div>
     </div>
   );
 }
