@@ -10,10 +10,10 @@ const getScore = (language: LanguageData) => [...Array(5)].map(
 
 const Language = ({ language }: {language: LanguageData}) => (
   <div >
-    <div >
+    <div className="text-2xl mt-6 mb-4">
       {language.name}
     </div>
-    <div className="w-24">
+    <div className="w-1/2">
         <div className="w-full bg-gray-200 rounded-full h-1.5 mb-4 dark:bg-gray-700">
         <div className="bg-blue-600 h-1.5 rounded-full dark:bg-blue-500" style={{width: language.skill/5*100+'%'}}></div>
       </div>

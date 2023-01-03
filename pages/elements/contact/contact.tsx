@@ -17,14 +17,14 @@ const contactIcons = new Map<contactType, IconType>([
 
 const Contact = ({ contact }: {contact: ContactData}): JSX.Element => {
   const icon: IconType = (contactIcons.get(contact.type as contactType) ? contactIcons.get(contact.type as contactType): GrDocumentMissing)!;
-  return <>
+  return <div className='mb-6 ml-6'>
     <a href={contact.data} rel={contact.rel} className="flex items-center">
         {React.createElement(icon)}
         <p className='pl-1'>
         {contact.text ? contact.text: contact.data}
         </p>
     </a>
-  </>
+  </div>
   ;
 };
 

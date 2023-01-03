@@ -2,15 +2,13 @@ import '../styles/cv.css';
 import Head from 'next/head';
 import Header from './elements/header';
 import People from './data/cv_data.json';
-import ContactList from './elements/contact/list';
 import SkillList from './elements/skills/list';
 import LanguageList from './elements/language/list';
 import EducationList from './elements/education/list';
 import ExperienceList from './elements/experience/list';
 import profilePic from './data/profile_pic.jpg'
-import { ContactData } from './elements/contact/contact';
 
-const {name, twittertag, short_bio, contact, skills, languages, school, work} = People.people;
+const {name, twittertag, short_bio, contacts, skills, languages, school, work} = People.people;
 
 const src="/profile_pic.jpg"
 
@@ -32,14 +30,13 @@ export default function Cv() {
         <meta name="twitter:description" content={short_bio} key="twitterdesc" />
         <meta name="description" content={short_bio} />
         </Head>
-      <div className='w-4/5 m-auto p-5'>
-        <Header name={name} bio={short_bio} src={src}/>
-        <ContactList listOfContacts={contact} />
+      <div className='w-2/3 m-auto p-5 max-w-3xl'>
+        <Header name={name} bio={short_bio} src={src} contacts={contacts}/>
         <SkillList listOfSkills={skills} />
         <LanguageList listOfLanguage={languages} />
         <EducationList listOfEducation={school}/>
         <ExperienceList listOfExperience={work} />
-    </div>
+      </div>
     </>
   );
 }
