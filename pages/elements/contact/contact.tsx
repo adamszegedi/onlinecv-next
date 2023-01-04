@@ -17,7 +17,7 @@ const contactIcons = new Map<contactType, IconType>([
 
 const Contact = ({ contact }: {contact: ContactData}): JSX.Element => {
   const icon: IconType = (contactIcons.get(contact.type as contactType) ? contactIcons.get(contact.type as contactType): GrDocumentMissing)!;
-  return <div className='mb-6 ml-6'>
+  return <div className='mb-6 content-baseline'>
     <a href={contact.data} rel={contact.rel} className="flex items-center">
         {React.createElement(icon)}
         <p className='pl-1'>

@@ -6,7 +6,7 @@ const Experience = ({ experience }: {experience: ExperienceData}) => (
       {experience.company+' - '+experience.job_title}
     </p>
     <p className="font-semibold">{experience.date}</p>
-    <p >{experience.responsibility}</p>
+    <p className="text-slate-500 dark:text-slate-400">{experience.responsibility}</p>
   </div>
 );
 
