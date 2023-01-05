@@ -6,3 +6,15 @@
     -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
     print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
 }
+
+@media print {
+    .vanish {
+      display: none;
+    }
+    
+    @page { size: auto;  margin: 0mm; }
+
+    .page-break{
+      page-break-after: always;
+    }
+  }

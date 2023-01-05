@@ -31,22 +31,22 @@ export default function Cv() {
         <meta name="twitter:description" content={short_bio} key="twitterdesc" />
         <meta name="description" content={short_bio} />
         </Head>
-        <div className='w-full h-full dark:bg-slate-800 dark:text-white'>
+      <div className='w-full h-full dark:bg-slate-800 dark:text-white'>
 
       <div className='md:w-full xl:w-2/3 m-auto p-5 max-w-3xl'>
-        <Header name={name} bio={short_bio} src={src} contacts={contacts}/>
-        <SkillList listOfSkills={skills} />
-        <div className='flex flex-row'>
-          <div className='basis-1/2'>
-            <LanguageList listOfLanguage={languages} />
+          <Header name={name} bio={short_bio} src={src} contacts={contacts}/>
+          <SkillList listOfSkills={skills} />
+          <div className='flex flex-row page-break'>
+            <div className='basis-1/2'>
+              <LanguageList listOfLanguage={languages} />
+            </div>
+            <div className='basis-1/2'>
+              <EducationList listOfEducation={school}/>
+            </div>
           </div>
-          <div className='basis-1/2'>
-            <EducationList listOfEducation={school}/>
-          </div>
+          <ExperienceList listOfExperience={work} />
         </div>
-        <ExperienceList listOfExperience={work} />
       </div>
-        </div>
     </>
   );
 }
