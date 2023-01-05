@@ -2,14 +2,13 @@ import '../styles/cv.css';
 import Head from 'next/head';
 import Header from './elements/header';
 import People from './data/cv_data.json';
-import ContactList from './elements/contact/list';
 import SkillList from './elements/skills/list';
 import LanguageList from './elements/language/list';
 import EducationList from './elements/education/list';
 import ExperienceList from './elements/experience/list';
 import profilePic from './data/profile_pic.jpg'
 
-const {name, twittertag, short_bio, contact, skills, languages, school, work} = People.people;
+const {name, twittertag, short_bio, contacts, skills, languages, school, work} = People.people;
 
 const src="/profile_pic.jpg"
 
@@ -31,16 +30,22 @@ export default function Cv() {
         <meta name="twitter:description" content={short_bio} key="twitterdesc" />
         <meta name="description" content={short_bio} />
         </Head>
-      <div>
-        <Header name={name} bio={short_bio} src={src}/>
-        <div className="grid-content">
-          <ContactList listOfContacts={contact} />
-          <SkillList listOfSkills={skills} />
-          <LanguageList listOfLanguage={languages} />
-          <EducationList listOfEducation={school} />
-          <ExperienceList listOfExperience={work} />
+        <div className='w-full h-full dark:bg-slate-800 dark:text-white'>
+
+      <div className='md:w-full xl:w-2/3 m-auto p-5 max-w-3xl'>
+        <Header name={name} bio={short_bio} src={src} contacts={contacts}/>
+        <SkillList listOfSkills={skills} />
+        <div className='flex flex-row'>
+          <div className='basis-1/2'>
+            <LanguageList listOfLanguage={languages} />
+          </div>
+          <div className='basis-1/2'>
+            <EducationList listOfEducation={school}/>
+          </div>
         </div>
+        <ExperienceList listOfExperience={work} />
       </div>
+        </div>
     </>
   );
 }

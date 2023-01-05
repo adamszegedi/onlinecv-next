@@ -1,50 +1,31 @@
 export interface ContactData {data:string, text?: string, type:string, rel?: string, src?: string};
-import Image from 'next/image';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaMastodon } from 'react-icons/fa';
+import { FaPhone } from 'react-icons/fa';
+import { FiMail } from 'react-icons/fi';
+import { GrDocumentMissing } from 'react-icons/gr'
+import { IconType } from 'react-icons/lib';
+import React from 'react';
+
+type contactType = 'mail'|'phone'|'linkedin'|'mastodon';
+const contactIcons = new Map<contactType, IconType>([
+  ["mail", FiMail],
+  ["mastodon", FaMastodon],
+  ["linkedin", FaLinkedin],
+  ["phone", FaPhone],
+]);
 
 const Contact = ({ contact }: {contact: ContactData}): JSX.Element => {
-  let linkElement: JSX.Element = <></>;
-  let href;
-  switch (contact.type) {
-    case 'web':
-      linkElement = (
-        <a href={contact.data} rel={contact.rel}>
-          <div className="button-layout button-contact-layout shadow">
-            <Image alt="web" src={contact.src!} height="20" width='20' />
-            {contact.text}
-          </div>
-        </a>
-      );
-      break;
-      case 'phone':
-        href = `tel:${contact.data}`;
-        linkElement = (
-          <a href={href}>
-          <div className="button-layout button-contact-layout shadow">
-          <Image alt="phone" src="/call_white_24dp.svg" height="20" width='20' />
-            {contact.data}
-          </div>
-        </a>
-      );
-      break;
-      case 'mail':
-        href = `mailto:${contact.data}`;
-        linkElement = (
-          <a href={href}>
-          <div className="button-layout button-contact-layout shadow">
-            <Image alt="mail" src="/email_white_24dp.svg" height="20" width='20' />
-            {contact.data}
-          </div>
-        </a>
-      );
-      break;
-    default:
-      break;
-  }
-  return linkElement;
+  const icon: IconType = (contactIcons.get(contact.type as contactType) ? contactIcons.get(contact.type as contactType): GrDocumentMissing)!;
+  return <div className='mb-6 content-baseline pl-4'>
+    <a href={contact.data} rel={contact.rel} className="flex items-center">
+        {React.createElement(icon)}
+        <p className='pl-1'>
+        {contact.text ? contact.text: contact.data}
+        </p>
+    </a>
+  </div>
+  ;
 };
-
-function getContactElement(type: 'web'|'phone'|'mail'){
-
-}
 
 export default Contact;

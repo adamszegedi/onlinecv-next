@@ -1,23 +1,22 @@
-import Circle from './circle';
-
 export interface LanguageData {name: string, skill: number}
 
 
 const getScore = (language: LanguageData) => [...Array(5)].map(
   (value, index) => {
-    const filled = index <= language.skill;
-    const key = (new Date().getTime()) * index;
-    return <Circle filled={filled} key={key} />;
+    const star = (index < language.skill) ? "*": "";
+    return star;
   },
 );
 
 const Language = ({ language }: {language: LanguageData}) => (
-  <div className="language-container">
-    <div className="language-name">
+  <div >
+    <div className="text-2xl mt-6 mb-4">
       {language.name}
     </div>
-    <div className="circle-wrapper">
-      {getScore(language)}
+    <div className="w-3/4 print-exac">
+        <div className="w-full bg-gray-200 rounded-full h-1.5 mb-4 dark:bg-gray-700">
+        <div className="bg-blue-600 h-1.5 rounded-full dark:bg-blue-500" style={{width: language.skill/5*100+'%'}}></div>
+      </div>
     </div>
   </div>
 );

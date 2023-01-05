@@ -5,9 +5,9 @@
     "job_title": "Test Engineer",
     "short_bio": "Experienced Test Automation Engineer with a demonstrated history of working in the banking industry. Skilled in SQL, Test Automation, Linux. Quality assurance professional with a strong background holding a BsC qualification of Business Information Technologist accredited by Corvinus University.",
     "skills": [
-      "HTML",
-      "CSS",
-      "Linux",
+      "HTML5",
+      "CSS3",
+      "GNU/Linux",
       "Test Automation",
       "Agile",
       "Test Planning",
@@ -23,28 +23,28 @@
       "TypeScript",
       "CI/CD"
     ],
-    "contact": [
+    "contacts": [
       {
         "type": "mail",
-        "data": "mail@adamszegedi.eu"
+        "data": "mailto:mail@adamszegedi.eu",
+        "text": "mail@adamszegedi.eu" 
       },
       {
         "type": "phone",
-        "data": "+36203726959"
+        "data": "tel:+36203726959",
+        "text": "+36203726959"
       },
       {
-        "type": "web",
+        "type": "linkedin",
         "data": "https://www.linkedin.com/in/adamszegedi/",
         "text": "Linkedin",
-        "rel": "me",
-        "src": "/public_white_24dp.svg"
+        "rel": "me"
       },
       {
-        "type": "web",
+        "type": "mastodon",
         "data": "https://social.linux.pizza/@adamszegedi",
         "text": "Mastodon",
-        "rel": "me",
-        "src": "/mastodon_white_24dp.svg"
+        "rel": "me"
       }
     ],
     "school": [
