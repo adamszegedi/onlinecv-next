@@ -24,7 +24,8 @@ export default function Cv() {
         <meta property="og:title" content={name} key="ogtitle" />
         <meta property="og:description" content={short_bio} key="ogdesc" />
         <meta property="og:image" content={profilePic.src} key="ogimage" />
-        <meta name="theme-color" content="#546e7a" />
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#546e7a" />
         <meta name="twitter:card" content='summary' key="twittercard" />
         <meta name="twitter:creator" content={twittertag} key="twittercreator" />
         <meta name="twitter:description" content={short_bio} key="twitterdesc" />
