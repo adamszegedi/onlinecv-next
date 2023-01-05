@@ -8,8 +8,8 @@ interface HeaderData {"name":string, "bio":string, "src": string, "contacts": Co
 export default function Header({ name, bio, src, contacts }: HeaderData) {
   return (
     <>
-        <header className='flex flex-wrap'>
-          <picture className='basis-1/4 rounded-full min-w-fit m-auto mb-2'>
+        <header className='flex flex-wrap mb-2'>
+          <picture className='basis-1/4 rounded-full min-w-fit m-auto sm:mb-2 mb-12'>
             <Image
             src={profilePic}
             alt="Adam Szegedi"
@@ -21,7 +21,7 @@ export default function Header({ name, bio, src, contacts }: HeaderData) {
           </picture>
           <ContactList listOfContacts={contacts}/>
         </header>
-      <section className='text-lg mt-2 text-slate-500 dark:text-slate-400'>{bio}</section>
+      <section className='text-lg text-slate-500 dark:text-slate-400'>{bio}</section>
     </>
   );
 }
