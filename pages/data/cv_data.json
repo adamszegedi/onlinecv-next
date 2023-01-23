@@ -36,15 +36,24 @@
         "text": "+36203726959"
       },
       {
-        "type": "linkedin",
-        "data": "https://www.linkedin.com/in/adamszegedi/",
-        "text": "Linkedin",
-        "rel": "me"
-      },
-      {
         "type": "mastodon",
         "data": "https://social.linux.pizza/@adamszegedi",
         "text": "Mastodon",
+        "print": "@adamszegedi",
+        "rel": "me"
+      },
+      {
+        "type": "twitter",
+        "data": "https://twitter.com/adamszegedi",
+        "text": "Twitter",
+        "print": "@adamszegedi",
+        "rel": "me"
+      },
+      {
+        "type": "linkedin",
+        "data": "https://www.linkedin.com/in/adamszegedi/",
+        "text": "Linkedin",
+        "print": "adamszegedi",
         "rel": "me"
       }
     ],

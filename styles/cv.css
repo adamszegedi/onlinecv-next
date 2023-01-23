@@ -8,7 +8,7 @@
 }
 
 @media print {
-    .vanish {
+    .print-vanish {
       display: none;
     }
     
@@ -16,5 +16,9 @@
 
     .page-break{
       page-break-after: always;
+    }
+
+    .print-appear {
+      display: inline !important;
     }
   }
