@@ -10,16 +10,18 @@ export default function Header({ name, bio, src, contacts }: HeaderData) {
   return (
     <>
         <header className='flex flex-wrap mb-2 relative'>
-          <picture className='basis-1/4 rounded-full min-w-fit m-auto sm:mb-2 mb-12'>
-            <Image
-            src={profilePic}
-            alt="Adam Szegedi"
-            style={{objectFit:"contain", width: "150px", height: "auto", borderRadius: "9999px", margin: "auto"}}
-            />
-            <h1 className='font-bold text-4xl mt-2'>
-              {name}
-            </h1>
-          </picture>
+          <div className='basis-1/4 min-w-fit mx-auto flex items-center mb-12 md:mb-0'>
+            <picture className='rounded-full'>
+              <Image
+              src={profilePic}
+              alt="Adam Szegedi"
+              style={{objectFit:"contain", width: "150px", height: "auto", borderRadius: "9999px", margin: "auto"}}
+              />
+              <h1 className='font-bold text-4xl mt-2'>
+                {name}
+              </h1>
+            </picture>
+          </div>
           <ContactList listOfContacts={contacts}/>
           <PrintButton/>
         </header>
