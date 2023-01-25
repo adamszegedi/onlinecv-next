@@ -27,7 +27,7 @@ const Contact = ({ contact }: {contact: ContactData}): JSX.Element => {
   const icon: IconType = (contactIcons.get(contactType) ? contactIcons.get(contact.type as contactType): GrDocumentMissing)!;
   const printText = changePrintText.includes(contactType) && contact.print ? ` ${contact.print}`: '';
   return <div className='mb-6 content-baseline pl-4'>
-    <a href={contact.data} rel={contact.rel} className={"flex items-center "}>
+    <a href={contact.data} rel={contact.rel} className={"flex items-center w-fit"}>
         {React.createElement(icon)}
         <p className={'pl-1'.concat(printText ? ' print-vanish': '')}>
         {
