@@ -1,4 +1,4 @@
-interface BoardData { name: string, className: string, elements: JSX.Element[] };
+interface BoardData { name: string, className?: string, elements: JSX.Element[] };
 
 const Board = ({ name, elements, className }: BoardData) => (
     <section className={`mt-12 ${className}`}>
