@@ -21,4 +21,13 @@
     .print-appear {
       display: inline !important;
     }
+
+    .print-top-padding-m {
+        padding-top: 10mm;
+    }
+
+    .print-top-padding-s {
+        padding-top: 5mm;
+    }
+
   }
