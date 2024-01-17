@@ -1,7 +1,8 @@
 import Cv from "./_app";
 
+
 function HomePage() {
-  return <Cv />
+    return <Cv />
 }
 
 export default HomePage
