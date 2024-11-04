@@ -9,7 +9,7 @@ interface HeaderData { "name": string, "bio": string, "src": string, "contacts":
 export default function Header({ name, bio, src, contacts }: HeaderData) {
     return (
         <>
-            <header className='flex flex-wrap mb-2 relative print-top-padding-s'>
+            <header className='flex flex-wrap relative print-top-padding-s'>
                 <div className='basis-1/4 min-w-fit mx-auto flex items-center mb-12 md:mb-0'>
                     <picture className='rounded-full'>
                         <Image
@@ -25,7 +25,7 @@ export default function Header({ name, bio, src, contacts }: HeaderData) {
                 <ContactList listOfContacts={contacts} />
                 <PrintButton />
             </header>
-            <section className='text-lg text-slate-500 dark:text-slate-400'>{bio}</section>
+            <section className='text-lg text-slate-500 dark:text-slate-400 mt-12'>{bio}</section>
         </>
     );
 }
