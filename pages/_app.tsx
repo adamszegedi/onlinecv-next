@@ -8,7 +8,7 @@ import EducationList from './elements/education/list';
 import ExperienceList from './elements/experience/list';
 import profilePic from './data/profile_pic.jpg'
 
-const { name, twittertag, short_bio, contacts, skills, languages, school, work } = People.people;
+const { name, short_bio, contacts, skills, languages, school, work } = People.people;
 
 const src = "/profile_pic.jpg"
 
@@ -26,9 +26,6 @@ export default function Cv() {
                 <meta property="og:image" content={profilePic.src} key="ogimage" />
                 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
                 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1e293b" />
-                <meta name="twitter:card" content='summary' key="twittercard" />
-                <meta name="twitter:creator" content={twittertag} key="twittercreator" />
-                <meta name="twitter:description" content={short_bio} key="twitterdesc" />
                 <meta name="description" content={short_bio} />
             </Head>
             <div className='w-full h-full dark:bg-slate-800 dark:text-white'>
